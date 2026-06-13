@@ -19,6 +19,9 @@ repositories {
 dependencies {
     // TODO: Add latest gradle dependency
 
+   // Source: https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation "org.testng:testng:7.0.0"
+
 }
 
 // Additional config for Crio workspace
@@ -26,6 +29,8 @@ buildDir = '/tmp/external_build'
 
 test {
     // TODO: Add configuration to use TestNG instead of JUnit
+
+    useTestNG() {}
 
     // Configurations to print test summary
     afterSuite { desc, result ->
